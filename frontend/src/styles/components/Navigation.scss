@@ -1,0 +1,144 @@
+@import "../variables/Variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-container {
+  background-color: $headerBackground1;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.4rem;
+
+  /* logo image and text */
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+        transition: 0.4s;
+      }
+    }
+
+    .logo-text {
+      font-family: "Roboto Mono", monospace;
+      font-size: 2rem;
+      margin-left: 0.3rem;
+      text-decoration: none;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  /* navigation bar*/
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      height: 6rem;
+      margin: 0 2rem;
+
+      .nav-links {
+        text-decoration: none;
+        padding: 0.66rem 1rem;
+
+        &:hover {
+          background-color: $hoverBackground;
+          border-radius: 4px;
+          transition: 0.2s;
+          color: red;
+        }
+      }
+    }
+  }
+
+  /* login and register */
+
+  .login-register-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .language {
+      font-family: "Roboto Mono", monospace;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      background-color: $headerBackground1;
+      padding: 0.66rem;
+    }
+
+    .login {
+      font-family: "Roboto Mono", monospace;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      background-color: $headerBackground1;
+
+      .login-link {
+        text-decoration: none;
+        padding: 0.66rem 1rem;
+      }
+
+      & .login-link:hover {
+        background-color: $hoverBackground;
+        color: red;
+        text-decoration: underline;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 1s;
+      }
+    }
+
+    .register {
+      font-family: "Roboto Mono", monospace;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      background-color: $headerBackground1;
+
+      .register-link {
+        text-decoration: none;
+        padding: 0.66rem 1rem;
+      }
+
+      & .register-link:hover {
+        background-color: $hoverBackground;
+        color: red;
+        text-decoration: underline;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+  }
+}
