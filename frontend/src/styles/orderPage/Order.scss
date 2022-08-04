@@ -1,0 +1,253 @@
+@import "../variables/Variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Order and payment page container styling*/
+.order-payment-container {
+  width: 50%;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3px;
+  background-color: $formBackground;
+
+  .order-payment-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    .order-payment-legend {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 1rem;
+    }
+  }
+}
+
+/* Order and Payment form styling*/
+
+.order-payment-form {
+  width: 90%;
+  margin: 1rem auto;
+
+  & h3 {
+    font-size: 1.6rem;
+    color: green;
+  }
+
+  & label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 0.2rem;
+  }
+}
+
+/* Customer detail styling*/
+
+.customer-detail-container {
+  width: 95%;
+  margin: 1rem auto;
+  background-color: $mainBackground;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1px;
+
+  & label {
+    display: block;
+  }
+
+  & input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .customer-detail-title {
+    margin-bottom: 1rem;
+  }
+
+  .full-name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .email-telephone {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .physical-address {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}
+
+/* Order detail of the customer styling*/
+
+.order-section-container {
+  width: 95%;
+  margin: 1rem auto;
+  background-color: $mainBackground;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1px;
+
+  & label {
+    display: block;
+  }
+
+  & input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+  }
+}
+
+.order-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 7rem 12rem;
+  column-gap: 1rem;
+}
+
+/* Payment detail of the customer styling*/
+
+.payment-details-container {
+  width: 95%;
+  margin: 1rem auto;
+  background-color: $mainBackground;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1px;
+
+  & label {
+    display: block;
+  }
+
+  & input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  & select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+  }
+}
+
+.paymentMethod-cardNumber {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-CVC-expiry-date-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.expiry-date-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Consent detail styling*/
+
+.consent-radio-container {
+  display: grid;
+  grid-template-columns: 1fr 10rem;
+  column-gap: 1rem;
+  width: 95%;
+  margin: 1rem auto;
+
+  .consent-statement {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .radio-label-container {
+    display: flex;
+
+    .radio-label {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-left: 1rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+/* Submit and Exit buttons styling*/
+
+.submit-exist-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 1rem auto;
+
+  .submit-order-button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: $buttonBackground;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background: $hoverBackground;
+      color: $hoverTextColor;
+      transition: 0.5s;
+    }
+  }
+
+  .exit-order-button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: $buttonBackground;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background: $hoverBackground;
+      color: $hoverTextColor;
+      transition: 0.5s;
+    }
+  }
+}
+
+/* Form error display on browser color styling*/
+
+.formValueError {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.order-sent {
+  background-color: rgb(200, 244, 242);
+  color: green;
+  font-size: 2rem;
+  text-align: center;
+}

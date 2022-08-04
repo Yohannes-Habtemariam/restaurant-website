@@ -21,26 +21,22 @@ const Navigation = () => {
         <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
                 <NavLink to="/" className="nav-links" style={({ isActive }) => ({
-                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"
-                })}> Home </NavLink>
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"})}> Home </NavLink>
             </li>
 
             <li className="nav-item">
                 <NavLink to="/about" className="nav-links" style={({ isActive }) => ({
-                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem",pointerEvents: isActive && "none"
-                })}> About </NavLink>
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem",pointerEvents: isActive && "none"})}> About </NavLink>
             </li>
 
             <li className="nav-item">
                 <NavLink to="/service" className="nav-links" style={({ isActive }) => ({
-                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"
-                })}> Service </NavLink>
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"})}> Service </NavLink>
             </li>
 
             <li className="nav-item">
                 <NavLink to="/contact" className="nav-links" style={({ isActive }) => ({
-                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"
-                })}> Contact </NavLink>
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"})}> Contact </NavLink>
             </li>
 
         </ul>
@@ -49,18 +45,20 @@ const Navigation = () => {
         <div className="login-register-container">
 
           <button className='login'>
-            <NavLink to="/login" className="login-link"> Login </NavLink>
+            <NavLink to="/login" className="login-link" style={({ isActive }) => ({
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"})}> Login </NavLink>
           </button> |
 
           <button className='register'> 
-            <NavLink to="/register" className="register-link"> Register </NavLink> 
+            <NavLink to="/register" className="register-link" style={({ isActive }) => ({
+                    color: isActive && "red", textDecoration: isActive && "underline", background: isActive && "#aee6fa", borderRadius: isActive && "0.3rem", pointerEvents: isActive && "none"})}> Register </NavLink> 
           </button>|
 
           <select name="language" className='language'>
-            <option value=""> Language</option>
-            <option value="">English</option>
-            <option value="">Tigrigna</option>
-            <option value="">Deutsch</option>
+            <option value=""> Language </option>
+            <option value=""> English </option>
+            <option value=""> Tigrigna </option>
+            <option value=""> Deutsch </option>
           </select> 
           
         </div>
