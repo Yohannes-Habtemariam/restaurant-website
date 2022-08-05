@@ -104,13 +104,6 @@
   font-size: 1.2rem;
 }
 
-.order-detail-container {
-  display: grid;
-  grid-template-columns: 1fr 7rem 12rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
 /* Payment detail of the customer styling*/
 .payment-details-container {
   width: 95%;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AddOrderField from "./AddOrderField";
 import "../../styles/orderPage/Order.css";
 
 const Order = () => {
@@ -14,8 +15,8 @@ const Order = () => {
     city: "",
     province: "",
     country: "",
-    orderType: "",
-    orderAmount: "",
+    orderName: "",
+    orderQuantity: "",
     deliveryDate: "",
     paymentMethod: "",
     cardNumber: "",
@@ -87,8 +88,8 @@ const Order = () => {
       city: values.city,
       province: values.province,
       country: values.country,
-      orderType: values.orderType,
-      orderAmount: values.orderAmount,
+      orderName: values.orderName,
+      orderQuantity: values.orderQuantity,
       deliveryDate: values.deliveryDate,
       paymentMethod: values.paymentMethod,
       cardNumber: values.cardNumber,
@@ -169,12 +170,12 @@ const Order = () => {
       errors.country = "Country is required";
     };
 
-    if(!formValues.orderType) {    
-      errors.orderType = "Order type is required";
+    if(!formValues.orderName) {    
+      errors.orderName = "Order type is required";
     };
 
-    if(!formValues.orderAmount) {    
-      errors.orderAmount = "Order amount is required";
+    if(!formValues.orderQuantity) {    
+      errors.orderQuantity = "Order amount is required";
     };
 
     if(!formValues.deliveryDate) {    
@@ -293,31 +294,11 @@ const Order = () => {
           </section>
 
           {/* Order Details Section */}
-          <section className="order-section-container">
-            <h3> Order Details</h3>
-            {/* First Order type, amount of order and date of order delivery*/}
-            <div className="order-detail-container">
-              <div>
-                <label htmlFor="orderType"> Order Type</label>
-                <input type="text" id="orderType" name="orderType" onChange={handleChange} value={values.orderType} />
-                <p className="formValueError"> {valuesErrors.orderType} </p>
-              </div>
+          <div>
 
-              <div>
-                <label htmlFor="orderAmount"> Amount</label>
-                <input type="number" id="orderAmount" name="orderAmount" onChange={handleChange} value={values.orderAmount} />
-                <p className="formValueError"> {valuesErrors.orderAmount} </p>
-              </div>
+            <AddOrderField/>
 
-              <div>
-                <label htmlFor="deliveryDate"> Delivery Date</label>
-                <input type="text" id="deliveryDate" name="deliveryDate" onChange={handleChange} value={values.deliveryDate} />
-                <p className="formValueError"> {valuesErrors.deliveryDate} </p>
-              </div>
-            </div>
-
-            <button>Add Order</button>
-          </section>
+          </div>
 
           {/* Payment Details Section */}
           <section className="payment-details-container">
@@ -412,20 +393,7 @@ const Order = () => {
         </div>
       </fieldset>
       {/* Individual Order Summary */}
-      <section className="order-summary-section">
-        <h3>  Order Summary </h3>
-        <div className="order-summary-container"> 
-          {orderSummary.map((order, index) => {
-            return (
-              <div key={index} className="order-summary-item">
-                <p>{order.orderType}</p>
-                <p>{order.orderAmount}</p>
-                <p>{order.deliveryDate}</p>
-              </div>
-            );
-          })} 
-        </div>
-      </section>
+     
     </section>
 
     
